@@ -58,16 +58,15 @@ const getWeatherData = async () => {
       console.log("未配置，使用备用天气接口");
       const result = await getOtherWeather();
       console.log(result);
-      const data = result.result;
       weatherData.adCode = {
-        city: data.city.City || "未知地区",
+        city: result.province + result.district,
         // adcode: data.city.cityId,
       };
       weatherData.weather = {
-        weather: data.condition.day_weather,
-        temperature: getTemperature(data.condition.min_degree, data.condition.max_degree),
-        winddirection: data.condition.day_wind_direction,
-        windpower: data.condition.day_wind_power,
+        weather: result.weather,
+        temperature: result.temperature,
+        winddirection: result.wind_direction,
+        windpower: result.wind_power,
       };
     } else {
       // 获取 Adcode

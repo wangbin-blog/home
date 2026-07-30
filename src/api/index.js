@@ -70,6 +70,6 @@ export const getWeather = async (key, city) => {
 // 获取教书先生天气 API
 // https://api.oioweb.cn/doc/weather/GetWeather
 export const getOtherWeather = async () => {
-  const res = await fetch("https://api.oioweb.cn/api/weather/GetWeather");
+  const res = await fetch("https://uapis.cn/api/v1/misc/weather?forecast=true");
   return await res.json();
 };
