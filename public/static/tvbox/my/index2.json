@@ -349,6 +349,30 @@
             "ext": "",
             "timeout": 10,
             "categories": []
+        },
+        {
+            "key": "heihei",
+            "name": "🔞嘿嘿资源站",
+            "type": 1,
+            "api": "https://api.heiapi.cc/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": "",
+            "timeout": 10,
+            "categories": []
+        },
+        {
+            "key": "huosu",
+            "name": "🔞火速资源站",
+            "type": 1,
+            "api": "https://api.huosuapi.cc/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": "",
+            "timeout": 10,
+            "categories": []
         }
     ],
     "parses": [
