@@ -15,6 +15,30 @@
             "categories": []
         },
         {
+            "key": "jusj",
+            "name": "奇妙官采",
+            "type": 1,
+            "api": "https://cj.jusj.top/api.php/provide/vod/at/json/",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": "",
+            "timeout": 10,
+            "categories": []
+        },
+        {
+            "key": "wsyzy",
+            "name": "无水印资源",
+            "type": 1,
+            "api": "https://api.wsyzy.net/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": "",
+            "timeout": 10,
+            "categories": []
+        },
+        {
             "key": "ruyizy",
             "name": "如意资源",
             "type": 1,
