@@ -20,19 +20,24 @@
     "link": "https://tools.huhaha.vip/"
   },
   {
-    "icon": "Book",
-    "name": "PDF",
-    "link": "https://bentopdf.huhaha.vip/"
+    "icon": "/images/icon/github.png",
+    "name": "GitHub代理",
+    "link": "https://github.huhaha.vip/"
   },
   {
     "icon": "Fire",
-    "name": "GitHub开源导航",
+    "name": "GitHub导航",
     "link": "https://ghnav.huhaha.vip/"
   },
   {
     "icon": "Link",
     "name": "短链服务",
     "link": "https://link.huhaha.vip/"
+  },
+  {
+    "icon": "Book",
+    "name": "PDF",
+    "link": "https://bentopdf.huhaha.vip/"
   },
   {
     "icon": "Voicemail",
