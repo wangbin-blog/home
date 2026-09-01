@@ -128,17 +128,13 @@ def main():
             groupByCategory[cat] = []
         groupByCategory[cat].append(row)
 
-    # 写入总 config.json
-    base_template["sites"] = outSites
-    with open("config.json", "w", encoding="utf-8") as f:
-        json.dump(base_template, f, ensure_ascii=False, indent=2)
-    print("生成: config.json")
 
     # 输出分类拆分 output/*.json
-    os.makedirs("output", exist_ok=True)
+    out_dir = "public/static/tvbox/maccms"
+    os.makedirs(out_dir, exist_ok=True)
     for catName, siteList in groupByCategory.items():
         safeName = re.sub(r'[\/\\:*?"<>|]', '_', catName)
-        outFile = os.path.join("output", f"{safeName}.json")
+        outFile = os.path.join(out_dir, f"{safeName}.json")
         with open(outFile, "w", encoding="utf-8") as f:
             json.dump(siteList, f, ensure_ascii=False, indent=2)
         print(f"生成: {outFile}")
