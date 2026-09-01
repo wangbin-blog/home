@@ -10,65 +10,6 @@ from base64 import b64decode
 CLOUD_API_URL = "https://api.maccms.ai/sites.json"
 CLOUD_ENCRYPT_KEY = b"maccms_rh_2024_s3cr3t_k3y!@#$%^&"
 
-base_template = {
-    "spider": "",
-    "wallpaper": "https://www.dmoe.cc/random.php",
-    "sites": [],
-    "parses": [
-        {
-            "name": "Json并发",
-            "type": 2,
-            "url": "Parallel"
-        },
-        {
-            "name": "pangujiexi解析",
-            "type": 2,
-            "url": "shturl.cc/AzImUezun2WZxD8qCVcBBBXKBsSY",
-            "ext": {
-                "flag": ["qiyi","qq","letv","sohu","youku","mgtv","bilibili","wasu","xigua","1905"]
-            }
-        },
-        {
-            "name": "ckplayer解析",
-            "type": 1,
-            "url": "https://www.ckplayer.vip/jiexi/?url=",
-            "ext": {
-                "flag": ["qiyi","qq","letv","sohu","youku","mgtv","bilibili","wasu","xigua","1905"]
-            }
-        }
-    ],
-    "flags": [
-        "youku","qq","iqiyi","qiyi","letv","sohu","tudou","pptv","mgtv","wasu","bilibili","le","duoduozy","renrenmi","xigua",
-        "优酷","腾讯","爱奇艺","奇艺","乐视","搜狐","土豆","PPTV","芒果","华数","哔哩","1905"
-    ],
-    "lives": [
-        {
-            "name": "咪咕直播",
-            "type": 0,
-            "url": "https://gh-proxy.com/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
-            "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
-            "logo": "https://live.fanmingming.com/tv/{name}.png"
-        },
-        {
-            "name": "直播二",
-            "type": 0,
-            "url": "https://gh-proxy.org/https://raw.githubusercontent.com/cqshushu/tvjk/main/all.txt",
-            "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
-            "logo": "https://live.fanmingming.com/tv/{name}.png"
-        },
-        {
-            "name": "直播三",
-            "type": 0,
-            "url": "https://live.zbds.top/tv/iptv4.txt",
-            "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
-            "logo": "https://live.fanmingming.com/tv/{name}.png"
-        }
-    ],
-    "ads": [
-        "mimg.0c1q0l.cn","www.googletagmanager.com","www.google-analytics.com","mc.usihnbcq.cn","mg.g1mm3d.cn","mscs.svaeuzh.cn","cnzz.hhurm.com","tp.vinuxhome.com","cnzz.mmstat.com","shturl.cc/0PuzZba","s23.cnzz.com","z3.cnzz.com","c.cnzz.com","stj.v1vo.top","z12.cnzz.com","img.mosflower.cn","tips.gamevvip.com","ehwe.yhdtns.com","xdn.cqqc3.com","www.jixunkyy.cn","sp.chemacid.cn","hm.baidu.com","s9.cnzz.com","z6.cnzz.com","um.cavuc.com","mav.mavuz.com","wofwk.aoidf3.com","z5.cnzz.com","xc.hubeijieshikj.cn","tj.tianwenhu.com","xg.gars57.cn","k.jinxiuzhilv.com","cdn.bootcss.com","ppl.xunzhuo123.com","xomk.jiangjunmh.top","img.xunzhuo123.com","z1.cnzz.com","s13.cnzz.com","xg.huataisangao.cn","z7.cnzz.com","xg.huataisangao.cn","z2.cnzz.com","s96.cnzz.com","q11.cnzz.com","thy.dacedsfa.cn","xg.whsbpw.cn","s19.cnzz.com","z8.cnzz.com","s4.cnzz.com","f5w.as12df.top","ae01.alicdn.com","www.92424.cn","k.wudejia.com","vivovip.mmszxc.top","qiu.xixiqiu.com","cdnjs.hnfenxun.com","cms.qdwght.com"
-    ]
-}
-
 
 def generateSiteKey(name: str) -> str:
     s = re.sub(r'[^\da-zA-Z]', '', name)
@@ -106,7 +47,6 @@ def main():
             if k not in item:
                 raise Exception(f"源数据缺失字段:{k}")
 
-    outSites = []
     groupByCategory = {}
 
     for item in sourceSites:
@@ -122,14 +62,12 @@ def main():
             "timeout": 10,
             "categories": []
         }
-        outSites.append(row)
         cat = item.get("category", "default")
         if cat not in groupByCategory:
             groupByCategory[cat] = []
         groupByCategory[cat].append(row)
 
-
-    # 输出分类拆分 output/*.json
+    # 输出路径 public/static/tvbox/maccms，只输出分类json
     out_dir = "public/static/tvbox/maccms"
     os.makedirs(out_dir, exist_ok=True)
     for catName, siteList in groupByCategory.items():
