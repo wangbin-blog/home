@@ -26,7 +26,7 @@ jobs:
           pip install pycryptodome requests
 
       - name: Run fetch script
-        run: python fetch_sites.py
+        run: python maccmsapi.py
 
       - name: Commit generated files
         run: |
