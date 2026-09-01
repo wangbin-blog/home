@@ -10,7 +10,7 @@ from base64 import b64decode
 CLOUD_API_URL = "https://api.maccms.ai/sites.json"
 CLOUD_ENCRYPT_KEY = b"maccms_rh_2024_s3cr3t_k3y!@#$%^&"
 
-# base_template完整保留，代码不使用此对象输出文件
+# 完整基础模板，每个分类文件都复制此模板，替换sites字段
 base_template = {
     "spider": "",
     "wallpaper": "https://www.dmoe.cc/random.php",
@@ -127,14 +127,19 @@ def main():
             groupByCategory[cat] = []
         groupByCategory[cat].append(row)
 
-    # 仅输出分类json，不生成config.json
     out_dir = "public/static/tvbox/maccms"
     os.makedirs(out_dir, exist_ok=True)
+
+    # 每个分类：深拷贝base_template，替换sites为当前分类站点数组
     for catName, siteList in groupByCategory.items():
+        import copy
+        file_data = copy.deepcopy(base_template)
+        file_data["sites"] = siteList
+
         safeName = re.sub(r'[\/\\:*?"<>|]', '_', catName)
         outFile = os.path.join(out_dir, f"{safeName}.json")
         with open(outFile, "w", encoding="utf-8") as f:
-            json.dump(siteList, f, ensure_ascii=False, indent=2)
+            json.dump(file_data, f, ensure_ascii=False, indent=2)
         print(f"生成: {outFile}")
 
 
