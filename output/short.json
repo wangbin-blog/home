@@ -1,0 +1,50 @@
+[
+  {
+    "key": "site_8578",
+    "name": "旺旺短剧",
+    "type": 1,
+    "api": "https://wwzy.tv/api.php/provide/vod/",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "ext": "",
+    "timeout": 10,
+    "categories": []
+  },
+  {
+    "key": "site_8527",
+    "name": "锦鲤短剧",
+    "type": 1,
+    "api": "https://jinlidj.com/api.php/provide/vod/",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "ext": "",
+    "timeout": 10,
+    "categories": []
+  },
+  {
+    "key": "site_9150",
+    "name": "量子短剧",
+    "type": 1,
+    "api": "https://cj.lziapi.com/api.php/provide/vod/?t=46",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "ext": "",
+    "timeout": 10,
+    "categories": []
+  },
+  {
+    "key": "site_6021",
+    "name": "非凡短剧",
+    "type": 1,
+    "api": "https://cj.ffzyapi.com/api.php/provide/vod/?t=36",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "ext": "",
+    "timeout": 10,
+    "categories": []
+  }
+]
