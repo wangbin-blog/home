@@ -1,0 +1,37 @@
+name: Maccms Sites 
+run-name: Generate config json
+
+on:
+  workflow_dispatch:  # 支持手动点击运行
+  schedule:
+    - cron: '0 4 * * *' # UTC时间，每天凌晨4点执行（北京时间+8）
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pycryptodome requests
+
+      - name: Run fetch script
+        run: python fetch_sites.py
+
+      - name: Commit generated files
+        run: |
+          git config --global user.name "github‑actions[bot]"
+          git config --global user.email "github‑actions[bot]@users.noreply.github.com"
+          git add config.json output/
+          git diff --quiet && git diff --staged --quiet || git commit -m "auto update config $(date '+%Y‑%m‑%d %H:%M')"
+          git push
