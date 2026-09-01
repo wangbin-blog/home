@@ -1,0 +1,98 @@
+[
+  {
+    "key": "site_3158",
+    "name": "量子资源",
+    "type": 1,
+    "api": "https://cj.lziapi.com/api.php/provide/vod/",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "ext": "",
+    "timeout": 10,
+    "categories": []
+  },
+  {
+    "key": "site_7890",
+    "name": "非凡资源",
+    "type": 1,
+    "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "ext": "",
+    "timeout": 10,
+    "categories": []
+  },
+  {
+    "key": "site_4790",
+    "name": "光速资源",
+    "type": 1,
+    "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "ext": "",
+    "timeout": 10,
+    "categories": []
+  },
+  {
+    "key": "site_1319",
+    "name": "红牛资源",
+    "type": 1,
+    "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "ext": "",
+    "timeout": 10,
+    "categories": []
+  },
+  {
+    "key": "site_2946",
+    "name": "暴风资源",
+    "type": 1,
+    "api": "https://bfzyapi.com/api.php/provide/vod/",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "ext": "",
+    "timeout": 10,
+    "categories": []
+  },
+  {
+    "key": "site_1370",
+    "name": "新浪资源",
+    "type": 1,
+    "api": "https://api.xinlangapi.com/api.php/provide/vod/",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "ext": "",
+    "timeout": 10,
+    "categories": []
+  },
+  {
+    "key": "site_3156",
+    "name": "闪电资源",
+    "type": 1,
+    "api": "https://www.sdzyapi.com/api.php/provide/vod/",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "ext": "",
+    "timeout": 10,
+    "categories": []
+  },
+  {
+    "key": "site_8770",
+    "name": "卧龙资源",
+    "type": 1,
+    "api": "https://collect.wolongzyw.com/api.php/provide/vod/",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "ext": "",
+    "timeout": 10,
+    "categories": []
+  }
+]
