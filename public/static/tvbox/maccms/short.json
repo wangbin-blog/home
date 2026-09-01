@@ -1,6 +1,6 @@
 [
   {
-    "key": "site_2012",
+    "key": "site_6228",
     "name": "旺旺短剧",
     "type": 1,
     "api": "https://wwzy.tv/api.php/provide/vod/",
@@ -12,7 +12,7 @@
     "categories": []
   },
   {
-    "key": "site_2147",
+    "key": "site_2180",
     "name": "锦鲤短剧",
     "type": 1,
     "api": "https://jinlidj.com/api.php/provide/vod/",
@@ -24,7 +24,7 @@
     "categories": []
   },
   {
-    "key": "site_1401",
+    "key": "site_1763",
     "name": "量子短剧",
     "type": 1,
     "api": "https://cj.lziapi.com/api.php/provide/vod/?t=46",
@@ -36,7 +36,7 @@
     "categories": []
   },
   {
-    "key": "site_2624",
+    "key": "site_6067",
     "name": "非凡短剧",
     "type": 1,
     "api": "https://cj.ffzyapi.com/api.php/provide/vod/?t=36",

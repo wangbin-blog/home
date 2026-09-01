@@ -1,6 +1,6 @@
 [
   {
-    "key": "site_7795",
+    "key": "site_5367",
     "name": "乐播资源",
     "type": 1,
     "api": "https://lebozy.com/api.php/provide/vod/",
@@ -12,7 +12,7 @@
     "categories": []
   },
   {
-    "key": "site_8912",
+    "key": "site_4735",
     "name": "大地资源",
     "type": 1,
     "api": "https://dadizy.com/api.php/provide/vod/",
@@ -36,7 +36,7 @@
     "categories": []
   },
   {
-    "key": "site_5838",
+    "key": "site_1788",
     "name": "玉兔资源",
     "type": 1,
     "api": "https://yutuzy.com/api.php/provide/vod/",
@@ -60,7 +60,7 @@
     "categories": []
   },
   {
-    "key": "site_3409",
+    "key": "site_4402",
     "name": "辣椒资源",
     "type": 1,
     "api": "http://lajiaozy.com/api.php/provide/vod/",
@@ -84,7 +84,7 @@
     "categories": []
   },
   {
-    "key": "site_2008",
+    "key": "site_6251",
     "name": "滴滴资源",
     "type": 1,
     "api": "https://didizy.com/api.php/provide/vod/",
@@ -96,7 +96,7 @@
     "categories": []
   },
   {
-    "key": "site_7367",
+    "key": "site_4989",
     "name": "鲨鱼资源",
     "type": 1,
     "api": "https://shayuzy5.com/api.php/provide/vod/",
@@ -108,7 +108,7 @@
     "categories": []
   },
   {
-    "key": "site_9514",
+    "key": "site_8256",
     "name": "奥斯卡资源",
     "type": 1,
     "api": "https://aosikazy1.com/api.php/provide/vod/",
@@ -120,7 +120,7 @@
     "categories": []
   },
   {
-    "key": "site_2975",
+    "key": "site_5202",
     "name": "色猫资源",
     "type": 1,
     "api": "https://semaozy8.com/api.php/provide/vod/",
@@ -132,7 +132,7 @@
     "categories": []
   },
   {
-    "key": "site_9343",
+    "key": "site_6119",
     "name": "森林资源",
     "type": 1,
     "api": "https://senlinzy.com/api.php/provide/vod/",
@@ -144,7 +144,7 @@
     "categories": []
   },
   {
-    "key": "site_9985",
+    "key": "site_6616",
     "name": "黑料资源",
     "type": 1,
     "api": "https://heiliaozy.com/api.php/provide/vod/",
@@ -156,7 +156,7 @@
     "categories": []
   },
   {
-    "key": "site_8310",
+    "key": "site_6026",
     "name": "奶香香资源",
     "type": 1,
     "api": "https://naixxzy.com/api.php/provide/vod/",
@@ -168,7 +168,7 @@
     "categories": []
   },
   {
-    "key": "site_9147",
+    "key": "site_5328",
     "name": "幸资源",
     "type": 1,
     "api": "https://xzytv.com/api.php/provide/vod/",
@@ -180,7 +180,7 @@
     "categories": []
   },
   {
-    "key": "site_3938",
+    "key": "site_7825",
     "name": "杏吧资源",
     "type": 1,
     "api": "https://sex8zy.com/api.php/provide/vod/",
@@ -204,7 +204,7 @@
     "categories": []
   },
   {
-    "key": "site_5684",
+    "key": "site_5677",
     "name": "百万资源",
     "type": 1,
     "api": "https://bwzy.tv/api.php/provide/vod/",
@@ -216,7 +216,7 @@
     "categories": []
   },
   {
-    "key": "site_3638",
+    "key": "site_8902",
     "name": "桃花资源",
     "type": 1,
     "api": "https://thzy1.me/api.php/provide/vod/",
@@ -228,7 +228,7 @@
     "categories": []
   },
   {
-    "key": "site_8144",
+    "key": "site_8308",
     "name": "豆豆资源",
     "type": 1,
     "api": "https://doudouzy.com/api.php/provide/vod/",
@@ -252,7 +252,7 @@
     "categories": []
   },
   {
-    "key": "site_7787",
+    "key": "site_6207",
     "name": "香蕉资源",
     "type": 1,
     "api": "https://www.xiangjiaozyw.com/api.php/provide/vod/",
@@ -276,7 +276,7 @@
     "categories": []
   },
   {
-    "key": "site_5579",
+    "key": "site_4439",
     "name": "番茄资源",
     "type": 1,
     "api": "https://fqzy.me/api.php/provide/vod/",
@@ -288,7 +288,7 @@
     "categories": []
   },
   {
-    "key": "site_3995",
+    "key": "site_6573",
     "name": "优优资源",
     "type": 1,
     "api": "https://www.yyzywcj.com/api.php/provide/vod/",
@@ -300,7 +300,7 @@
     "categories": []
   },
   {
-    "key": "site_5565",
+    "key": "site_2008",
     "name": "小鸡资源",
     "type": 1,
     "api": "https://xiaojizy.live/api.php/provide/vod/",
@@ -312,7 +312,7 @@
     "categories": []
   },
   {
-    "key": "site_3055",
+    "key": "site_3149",
     "name": "红楼资源",
     "type": 1,
     "api": "https://hlouzy.cn/api.php/provide/vod/",
@@ -324,7 +324,7 @@
     "categories": []
   },
   {
-    "key": "site_8771",
+    "key": "site_6888",
     "name": "老色逼资源",
     "type": 1,
     "api": "https://laosebizy.com/api.php/provide/vod/",
@@ -336,7 +336,7 @@
     "categories": []
   },
   {
-    "key": "site_6011",
+    "key": "site_9804",
     "name": "黄色仓库资源",
     "type": 1,
     "api": "https://hsckzy001.com/api.php/provide/vod/",
@@ -348,7 +348,7 @@
     "categories": []
   },
   {
-    "key": "site_3383",
+    "key": "site_3442",
     "name": "大奶子资源",
     "type": 1,
     "api": "https://danaizizy.com/api.php/provide/vod/",
