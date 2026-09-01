@@ -1,20 +1,28 @@
 {
     "urls": [
         {
-            "url": "https://www.huhaha.vip/static/tvbox/xhz/index.json",
-            "name": "小盒子"
-        },
-        {
-            "url": "https://www.huhaha.vip/static/tvbox/qiaoer/index.json",
-            "name": "巧儿"
-        },
-        {
             "url": "https://www.huhaha.vip/static/tvbox/my/index1.json",
             "name": "👶小孩那桌"
         },
         {
             "url": "https://www.huhaha.vip/static/tvbox/my/index2.json",
             "name": "🧑长大了"
-        }
+        },
+        {
+            "url": "https://www.huhaha.vip/static/tvbox/maccms/short.json",
+            "name": "短剧"
+        },
+        {
+            "url": "https://www.huhaha.vip/static/tvbox/maccms/mian.json",
+            "name": "优质资源"
+        },
+        {
+            "url": "https://www.huhaha.vip/static/tvbox/maccms/vod.json",
+            "name": "影视资源"
+        },
+        {
+            "url": "https://www.huhaha.vip/static/tvbox/maccms/midnight.json",
+            "name": "午夜资源"
+        },
     ]
 }
