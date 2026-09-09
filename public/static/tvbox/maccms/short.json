@@ -3,7 +3,7 @@
   "wallpaper": "https://www.dmoe.cc/random.php",
   "sites": [
     {
-      "key": "site_7761",
+      "key": "site_6532",
       "name": "旺旺短剧",
       "type": 1,
       "api": "https://wwzy.tv/api.php/provide/vod/",
@@ -15,7 +15,7 @@
       "categories": []
     },
     {
-      "key": "site_3216",
+      "key": "site_8272",
       "name": "锦鲤短剧",
       "type": 1,
       "api": "https://jinlidj.com/api.php/provide/vod/",
@@ -27,7 +27,7 @@
       "categories": []
     },
     {
-      "key": "site_5012",
+      "key": "site_6604",
       "name": "量子短剧",
       "type": 1,
       "api": "https://cj.lziapi.com/api.php/provide/vod/?t=46",
@@ -39,7 +39,7 @@
       "categories": []
     },
     {
-      "key": "site_7571",
+      "key": "site_4702",
       "name": "非凡短剧",
       "type": 1,
       "api": "https://cj.ffzyapi.com/api.php/provide/vod/?t=36",
