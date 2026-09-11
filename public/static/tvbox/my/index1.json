@@ -776,23 +776,23 @@
     ],
     "lives": [
         {
-            "name": "咪咕直播",
+            "name": "直播一",
             "type": 0,
-            "url": "https://gh-proxy.com/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
+            "url": "https://live.zbds.top/tv/iptv4.m3u",
             "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
             "logo": "https://live.fanmingming.com/tv/{name}.png"
         },
         {
             "name": "直播二",
             "type": 0,
-            "url": "https://gh-proxy.org/https:/raw.githubusercontent.com/cqshushu/tvjk/main/all.txt",
+            "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
             "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
             "logo": "https://live.fanmingming.com/tv/{name}.png"
         },
         {
             "name": "直播三",
             "type": 0,
-            "url": "https://live.zbds.top/tv/iptv4.txt",
+            "url": "https://live.zbds.top/tv/iptv6.m3u",
             "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
             "logo": "https://live.fanmingming.com/tv/{name}.png"
         }
