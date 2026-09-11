@@ -1,0 +1,658 @@
+{
+    "spider": "./custom_spider.jar",
+    "wallpaper": "https://www.dmoe.cc/random.php",
+    "sites": [
+    {
+        "key": "dyttzyapi",
+        "name": "电影天堂",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://caiji.dyttzyapi.com/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://caiji.dyttzyapi.com/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://caiji.dyttzyapi.com/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://caiji.dyttzyapi.com/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "jusj",
+        "name": "奇妙官采",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://cj.jusj.top/api.php/provide/vod/at/json/?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://cj.jusj.top/api.php/provide/vod/at/json/?ac=detail&ids={ids}",
+        "searchUrl": "https://cj.jusj.top/api.php/provide/vod/at/json/?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://cj.jusj.top/api.php/provide/vod/at/json/?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "wsyzy",
+        "name": "无水印资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://api.wsyzy.net/api.php/provide/vod/?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://api.wsyzy.net/api.php/provide/vod/?ac=detail&ids={ids}",
+        "searchUrl": "https://api.wsyzy.net/api.php/provide/vod/?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://api.wsyzy.net/api.php/provide/vod/?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "ruyizy",
+        "name": "如意资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://cj.rytvapi.com/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://cj.rytvapi.com/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://cj.rytvapi.com/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://cj.rytvapi.com/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "bfzy",
+        "name": "暴风资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://bfzyapi.com/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://bfzyapi.com/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://bfzyapi.com/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://bfzyapi.com/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "jszy",
+        "name": "极速资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://jszyapi.com/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://jszyapi.com/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://jszyapi.com/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://jszyapi.com/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "guangsuzy",
+        "name": "光速资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://api.guangsuapi.com/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://api.guangsuapi.com/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://api.guangsuapi.com/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://api.guangsuapi.com/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "subozy",
+        "name": "速播资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://subocj.com/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://subocj.com/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://subocj.com/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://subocj.com/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "jyzyapi",
+        "name": "金鹰资源站",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://jyzyapi.com/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://jyzyapi.com/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://jyzyapi.com/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://jyzyapi.com/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "p2100",
+        "name": "飘零影院资源站",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://p2100.net/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://p2100.net/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://p2100.net/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://p2100.net/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "ffzy5",
+        "name": "非凡资源站",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://ffzy5.tv/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://ffzy5.tv/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://ffzy5.tv/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://ffzy5.tv/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "feifanzy",
+        "name": "非凡资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "http://api.ffzyapi.com/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "http://api.ffzyapi.com/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "http://api.ffzyapi.com/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "http://api.ffzyapi.com/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "dbzy",
+        "name": "豆瓣资源站",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://dbzy.tv/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://dbzy.tv/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://dbzy.tv/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://dbzy.tv/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "doubanzy",
+        "name": "豆瓣资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://caiji.dbzy5.com/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://caiji.dbzy5.com/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://caiji.dbzy5.com/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://caiji.dbzy5.com/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "hongniuzy2",
+        "name": "红牛资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://www.hongniuzy2.com/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://www.hongniuzy2.com/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://www.hongniuzy2.com/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://www.hongniuzy2.com/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "wujinapi",
+        "name": "无尽资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8?ac=detail&ids={ids}",
+        "searchUrl": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "sdzyapi",
+        "name": "闪电资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://xsd.sdzyapi.com/api.php/provide/vod/from/sdm3u8?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://xsd.sdzyapi.com/api.php/provide/vod/from/sdm3u8?ac=detail&ids={ids}",
+        "searchUrl": "https://xsd.sdzyapi.com/api.php/provide/vod/from/sdm3u8?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://xsd.sdzyapi.com/api.php/provide/vod/from/sdm3u8?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "niuniuzy",
+        "name": "牛牛资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://api.niuniuzy.me/api.php/provide/vod/from/nnm3u8?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://api.niuniuzy.me/api.php/provide/vod/from/nnm3u8?ac=detail&ids={ids}",
+        "searchUrl": "https://api.niuniuzy.me/api.php/provide/vod/from/nnm3u8?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://api.niuniuzy.me/api.php/provide/vod/from/nnm3u8?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "maoyanapi",
+        "name": "猫眼资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://api.maoyanapi.top/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://api.maoyanapi.top/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://api.maoyanapi.top/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://api.maoyanapi.top/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "huyazy",
+        "name": "虎牙资源站",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://huyazy.net/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://huyazy.net/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://huyazy.net/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://huyazy.net/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "maotaizy",
+        "name": "茅台资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8?ac=detail&ids={ids}",
+        "searchUrl": "https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "jinlidj",
+        "name": "锦鲤资源（短剧）",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://api.jinlidj.com/api/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://api.jinlidj.com/api/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://api.jinlidj.com/api/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://api.jinlidj.com/api/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "apiyhzy",
+        "name": "樱花资源站",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://m3u8.apiyhzy.com/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://m3u8.apiyhzy.com/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://m3u8.apiyhzy.com/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://m3u8.apiyhzy.com/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "apibdzy",
+        "name": "百度云资源站",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://api.apibdzy.com/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://api.apibdzy.com/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://api.apibdzy.com/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://api.apibdzy.com/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "mdzy",
+        "name": "魔都资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://www.mdzyapi.com/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://www.mdzyapi.com/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://www.mdzyapi.com/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://www.mdzyapi.com/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "360zyzz",
+        "name": "360资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://360zyzz.com/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://360zyzz.com/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://360zyzz.com/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://360zyzz.com/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "suoniapi",
+        "name": "索尼资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://suonizy.net/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://suonizy.net/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://suonizy.net/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://suonizy.net/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "iqiyizy",
+        "name": "爱奇艺资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://iqiyizyapi.com/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://iqiyizyapi.com/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://iqiyizyapi.com/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://iqiyizyapi.com/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "yayazy",
+        "name": "鸭鸭资源",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://cj.yayazy.net/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://cj.yayazy.net/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://cj.yayazy.net/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://cj.yayazy.net/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "tyyszyapi",
+        "name": "天涯影视资源站",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://tyyszyapi.com/api.php/provide/vod/?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://tyyszyapi.com/api.php/provide/vod/?ac=detail&ids={ids}",
+        "searchUrl": "https://tyyszyapi.com/api.php/provide/vod/?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://tyyszyapi.com/api.php/provide/vod/?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "key": "haohuazy",
+        "name": "豪华资源站",
+        "type": 3,
+        "api": "csp",
+        "filterable": 1,
+        "searchable": 1,
+        "quickSearch": 1,
+        "apiUrl": "https://haohuazy.com/api.php/provide/vod?ac=list&t={cate}&pg={pg}&year={year}&area={area}&isend={isend}",
+        "detailUrl": "https://haohuazy.com/api.php/provide/vod?ac=detail&ids={ids}",
+        "searchUrl": "https://haohuazy.com/api.php/provide/vod?ac=search&wd={wd}&pg={pg}",
+        "cateUrl": "https://haohuazy.com/api.php/provide/vod?ac=list",
+        "headers": {
+            "User-Agent": "Mozilla/5.0"
+        }
+    }
+],
+    "parses": [
+        {
+            "name": "Json并发",
+            "type": 2,
+            "url": "Parallel"
+        },
+        {
+            "name": "pangujiexi解析",
+            "type": 2,
+            "url": "https://www.pangujiexi.com/jiexi/?url=",
+            "ext": {
+                "flag": [
+                    "qiyi",
+                    "qq",
+                    "letv",
+                    "sohu",
+                    "youku",
+                    "mgtv",
+                    "bilibili",
+                    "wasu",
+                    "xigua",
+                    "1905"
+                ]
+            }
+        },
+        {
+            "name": "ckplayer解析",
+            "type": 1,
+            "url": "https://www.ckplayer.vip/jiexi/?url=",
+            "ext": {
+                "flag": [
+                    "qiyi",
+                    "qq",
+                    "letv",
+                    "sohu",
+                    "youku",
+                    "mgtv",
+                    "bilibili",
+                    "wasu",
+                    "xigua",
+                    "1905"
+                ]
+            }
+        }
+    ],
+    "flags": [
+        "youku",
+        "qq",
+        "iqiyi",
+        "qiyi",
+        "letv",
+        "sohu",
+        "tudou",
+        "pptv",
+        "mgtv",
+        "wasu",
+        "bilibili",
+        "le",
+        "duoduozy",
+        "renrenmi",
+        "xigua",
+        "优酷",
+        "腾讯",
+        "爱奇艺",
+        "奇艺",
+        "乐视",
+        "搜狐",
+        "土豆",
+        "PPTV",
+        "芒果",
+        "华数",
+        "哔哩",
+        "1905"
+    ],
+    "lives": [
+        {
+            "name": "直播一",
+            "type": 0,
+            "url": "https://live.zbds.top/tv/iptv4.m3u",
+            "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
+            "logo": "https://live.fanmingming.com/tv/{name}.png"
+        },
+        {
+            "name": "直播二",
+            "type": 0,
+            "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
+            "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
+            "logo": "https://live.fanmingming.com/tv/{name}.png"
+        },
+        {
+            "name": "直播三",
+            "type": 0,
+            "url": "https://live.zbds.top/tv/iptv6.m3u",
+            "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
+            "logo": "https://live.fanmingming.com/tv/{name}.png"
+        }
+    ],
+    "ads": [
+        "mimg.0c1q0l.cn",
+        "www.googletagmanager.com",
+        "www.google-analytics.com",
+        "mc.usihnbcq.cn",
+        "mg.g1mm3d.cn",
+        "mscs.svaeuzh.cn",
+        "cnzz.hhurm.com",
+        "tp.vinuxhome.com",
+        "cnzz.mmstat.com",
+        "www.baihuillq.com",
+        "s23.cnzz.com",
+        "z3.cnzz.com",
+        "c.cnzz.com",
+        "stj.v1vo.top",
+        "z12.cnzz.com",
+        "img.mosflower.cn",
+        "tips.gamevvip.com",
+        "ehwe.yhdtns.com",
+        "xdn.cqqc3.com",
+        "www.jixunkyy.cn",
+        "sp.chemacid.cn",
+        "hm.baidu.com",
+        "s9.cnzz.com",
+        "z6.cnzz.com",
+        "um.cavuc.com",
+        "mav.mavuz.com",
+        "wofwk.aoidf3.com",
+        "z5.cnzz.com",
+        "xc.hubeijieshikj.cn",
+        "tj.tianwenhu.com",
+        "xg.gars57.cn",
+        "k.jinxiuzhilv.com",
+        "cdn.bootcss.com",
+        "ppl.xunzhuo123.com",
+        "xomk.jiangjunmh.top",
+        "img.xunzhuo123.com",
+        "z1.cnzz.com",
+        "s13.cnzz.com",
+        "xg.huataisangao.cn",
+        "z7.cnzz.com",
+        "xg.huataisangao.cn",
+        "z2.cnzz.com",
+        "s96.cnzz.com",
+        "q11.cnzz.com",
+        "thy.dacedsfa.cn",
+        "xg.whsbpw.cn",
+        "s19.cnzz.com",
+        "z8.cnzz.com",
+        "s4.cnzz.com",
+        "f5w.as12df.top",
+        "ae01.alicdn.com",
+        "www.92424.cn",
+        "k.wudejia.com",
+        "vivovip.mmszxc.top",
+        "qiu.xixiqiu.com",
+        "cdnjs.hnfenxun.com",
+        "cms.qdwght.com"
+    ]
+}
