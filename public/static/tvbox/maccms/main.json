@@ -3,7 +3,7 @@
   "wallpaper": "https://www.dmoe.cc/random.php",
   "sites": [
     {
-      "key": "site_4156",
+      "key": "site_3676",
       "name": "量子资源",
       "type": 1,
       "api": "https://cj.lziapi.com/api.php/provide/vod/",
@@ -15,7 +15,7 @@
       "categories": []
     },
     {
-      "key": "site_7189",
+      "key": "site_4550",
       "name": "非凡资源",
       "type": 1,
       "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
@@ -27,7 +27,7 @@
       "categories": []
     },
     {
-      "key": "site_5287",
+      "key": "site_3909",
       "name": "光速资源",
       "type": 1,
       "api": "https://api.guangsuapi.com/api.php/provide/vod/",
@@ -39,7 +39,7 @@
       "categories": []
     },
     {
-      "key": "site_7479",
+      "key": "site_7878",
       "name": "红牛资源",
       "type": 1,
       "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
@@ -51,7 +51,7 @@
       "categories": []
     },
     {
-      "key": "site_9128",
+      "key": "site_1934",
       "name": "暴风资源",
       "type": 1,
       "api": "https://bfzyapi.com/api.php/provide/vod/",
@@ -63,7 +63,7 @@
       "categories": []
     },
     {
-      "key": "site_9455",
+      "key": "site_9067",
       "name": "新浪资源",
       "type": 1,
       "api": "https://api.xinlangapi.com/api.php/provide/vod/",
@@ -75,7 +75,7 @@
       "categories": []
     },
     {
-      "key": "site_7508",
+      "key": "site_2697",
       "name": "闪电资源",
       "type": 1,
       "api": "https://www.sdzyapi.com/api.php/provide/vod/",
@@ -87,7 +87,7 @@
       "categories": []
     },
     {
-      "key": "site_9982",
+      "key": "site_5039",
       "name": "卧龙资源",
       "type": 1,
       "api": "https://collect.wolongzyw.com/api.php/provide/vod/",
