@@ -24,5 +24,9 @@
             "url": "https://www.huhaha.vip/static/tvbox/maccms/midnight.json",
             "name": "午夜资源"
         },
+        {
+            "url": "https://gh-proxy.com/https://github.com/bizhangjie/CatVodSpider/blob/main/json/index18.json",
+            "name": "午夜测试资源"
+        },
     ]
 }
