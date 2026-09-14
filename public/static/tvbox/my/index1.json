@@ -698,15 +698,6 @@
             "ext": "",
             "timeout": 10,
             "categories": []
-        },{
-            "key": "maccms-drpy",
-            "name": "苹果CMS-JS多筛",
-            "type": 3,
-            "api": "https://www.huhaha.vip/static/tvbox/my/js/drpy2.min.js",
-            "ext": "https://www.huhaha.vip/static/tvbox/my/js/maccms_dytt.js",
-            "filterable": 1,
-            "searchable": 1,
-            "quickSearch": 1
         }
     ],
     "parses": [
@@ -801,7 +792,7 @@
         {
             "name": "直播三",
             "type": 0,
-            "url": "https://live.zbds.top/tv/iptv6.m3u",
+            "url": "https://gh-proxy.org/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
             "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
             "logo": "https://live.fanmingming.com/tv/{name}.png"
         }
