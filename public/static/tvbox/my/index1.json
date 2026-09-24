@@ -14,6 +14,8 @@
             "timeout": 10,
             "categories": []
         },
+        
+        {"key": "dr_电影天堂[资]","name": "🥒电影天堂[采][DR]","type": 3,"api": "./js/drpy2.min.js","ext": "./js/dytt.js"},
         {
             "key": "jusj",
             "name": "奇妙官采",
