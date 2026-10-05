@@ -3,7 +3,7 @@
   "wallpaper": "https://www.dmoe.cc/random.php",
   "sites": [
     {
-      "key": "site_5468",
+      "key": "site_1913",
       "name": "天涯资源",
       "type": 1,
       "api": "https://tyyszyapi.com/api.php/provide/vod/",
@@ -15,7 +15,7 @@
       "categories": []
     },
     {
-      "key": "site_5932",
+      "key": "site_9230",
       "name": "量子短剧",
       "type": 1,
       "api": "https://cj.lziapi.com/api.php/provide/vod/?t=46",
@@ -27,7 +27,7 @@
       "categories": []
     },
     {
-      "key": "site_6255",
+      "key": "site_6652",
       "name": "非凡短剧",
       "type": 1,
       "api": "https://cj.ffzyapi.com/api.php/provide/vod/?t=36",
