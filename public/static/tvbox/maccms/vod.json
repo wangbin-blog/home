@@ -3,7 +3,7 @@
   "wallpaper": "https://www.dmoe.cc/random.php",
   "sites": [
     {
-      "key": "site_4250",
+      "key": "site_5945",
       "name": "索尼资源",
       "type": 1,
       "api": "https://suonizy.com/api.php/provide/vod/",
@@ -15,7 +15,7 @@
       "categories": []
     },
     {
-      "key": "site_1057",
+      "key": "site_7807",
       "name": "最大资源",
       "type": 1,
       "api": "https://www.zuidazy.co/api.php/provide/vod/",
@@ -27,7 +27,7 @@
       "categories": []
     },
     {
-      "key": "site_8549",
+      "key": "site_6248",
       "name": "茅台资源",
       "type": 1,
       "api": "https://caiji.maotai999.vip/api.php/provide/vod/",
@@ -51,7 +51,7 @@
       "categories": []
     },
     {
-      "key": "site_9317",
+      "key": "site_9392",
       "name": "如意资源",
       "type": 1,
       "api": "https://ryzy.tv/api.php/provide/vod/",
@@ -63,7 +63,7 @@
       "categories": []
     },
     {
-      "key": "site_2604",
+      "key": "site_8091",
       "name": "魔都资源",
       "type": 1,
       "api": "https://moduzy.com/api.php/provide/vod/",
@@ -75,7 +75,7 @@
       "categories": []
     },
     {
-      "key": "site_3831",
+      "key": "site_4259",
       "name": "豪华资源",
       "type": 1,
       "api": "https://huohuzy.com/api.php/provide/vod/",
@@ -87,7 +87,7 @@
       "categories": []
     },
     {
-      "key": "site_9481",
+      "key": "site_2643",
       "name": "电影天堂",
       "type": 1,
       "api": "https://dyttzyw.tv/api.php/provide/vod/",
@@ -99,7 +99,7 @@
       "categories": []
     },
     {
-      "key": "site_3306",
+      "key": "site_7847",
       "name": "无尽资源",
       "type": 1,
       "api": "https://api.wsyzy.net/api.php/provide/vod/",
@@ -111,7 +111,7 @@
       "categories": []
     },
     {
-      "key": "site_5248",
+      "key": "site_7622",
       "name": "极速资源",
       "type": 1,
       "api": "https://www.jisuzy.com/api.php/provide/vod/",
@@ -123,7 +123,7 @@
       "categories": []
     },
     {
-      "key": "site_2900",
+      "key": "site_5451",
       "name": "虎牙资源",
       "type": 1,
       "api": "https://huyazy.net/api.php/provide/vod/",
@@ -135,7 +135,7 @@
       "categories": []
     },
     {
-      "key": "site_4395",
+      "key": "site_6439",
       "name": "豆瓣资源",
       "type": 1,
       "api": "https://dbzy.tv/api.php/provide/vod/",
@@ -147,7 +147,7 @@
       "categories": []
     },
     {
-      "key": "site_3200",
+      "key": "site_3621",
       "name": "影剧资源",
       "type": 1,
       "api": "https://yjzy.me/api.php/provide/vod/",
@@ -159,7 +159,7 @@
       "categories": []
     },
     {
-      "key": "site_8255",
+      "key": "site_9393",
       "name": "天涯影视",
       "type": 1,
       "api": "https://tyyszy.com/api.php/provide/vod/",
@@ -171,7 +171,7 @@
       "categories": []
     },
     {
-      "key": "site_8062",
+      "key": "site_7222",
       "name": "猫眼资源",
       "type": 1,
       "api": "https://www.maoyanzy.com/api.php/provide/vod/",
@@ -183,7 +183,7 @@
       "categories": []
     },
     {
-      "key": "site_7983",
+      "key": "site_7654",
       "name": "牛牛资源",
       "type": 1,
       "api": "https://api.niuniuzy.me/api.php/provide/vod/",
@@ -207,7 +207,7 @@
       "categories": []
     },
     {
-      "key": "site_1314",
+      "key": "site_7720",
       "name": "鸭鸭资源",
       "type": 1,
       "api": "https://yayazy2.com/api.php/provide/vod/",
@@ -219,7 +219,7 @@
       "categories": []
     },
     {
-      "key": "site_7324",
+      "key": "site_7703",
       "name": "爱奇艺资源",
       "type": 1,
       "api": "https://www.iqiyizy.com/api.php/provide/vod/",
@@ -231,7 +231,7 @@
       "categories": []
     },
     {
-      "key": "site_6925",
+      "key": "site_7386",
       "name": "天空资源",
       "type": 1,
       "api": "https://api.tiankongapi.com/api.php/provide/vod/",
@@ -243,7 +243,7 @@
       "categories": []
     },
     {
-      "key": "site_6122",
+      "key": "site_5034",
       "name": "淘片资源",
       "type": 1,
       "api": "https://taopianapi.com/cjapi/mc10/vod/json.html",
@@ -255,7 +255,7 @@
       "categories": []
     },
     {
-      "key": "site_9136",
+      "key": "site_1942",
       "name": "百度资源",
       "type": 1,
       "api": "https://api.apibdzy.com/api.php/provide/vod/",
@@ -291,7 +291,7 @@
       "categories": []
     },
     {
-      "key": "site_8481",
+      "key": "site_2379",
       "name": "快车资源",
       "type": 1,
       "api": "https://caiji.kuaichezy.org/api.php/provide/vod/?ac=list",
@@ -303,7 +303,7 @@
       "categories": []
     },
     {
-      "key": "site_7236",
+      "key": "site_7148",
       "name": "金鹰资源",
       "type": 1,
       "api": "https://jinyingzy.com/api.php/provide/vod/",
@@ -315,7 +315,7 @@
       "categories": []
     },
     {
-      "key": "site_4661",
+      "key": "site_3034",
       "name": "樱花资源",
       "type": 1,
       "api": "https://m3u8.apiyhzy.com/api.php/provide/vod/",
@@ -327,7 +327,7 @@
       "categories": []
     },
     {
-      "key": "site_9116",
+      "key": "site_7741",
       "name": "优质资源",
       "type": 1,
       "api": "https://1080zyk20.com/api.php/provide/vod/",
