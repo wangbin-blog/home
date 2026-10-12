@@ -17,7 +17,7 @@
         {
             "key": "dr_电影天堂[资]",
             "name": "🥒电影天堂[采][DR]",
-            "type": 3,
+            "type": 4,
             "api": "./js/dytt.js",
             "ext": "",
             "searchable": 1,

@@ -1,13 +1,9 @@
-// dytt.js — 电影天堂资源（maccms 采集接口）QuickJS 爬虫
-// 采集地址：https://caiji.dyttzyapi.com/api.php/provide/vod
-// Site 配置示例：
-// { "key": "dytt", "name": "电影天堂", "type": 3, "api": "./dytt.js", "ext": {} }
-
+// dytt.js — 电影天堂资源 maccms采集 QuickJS (type:4)
+// site配置: {"key":"dytt","name":"电影天堂","type":4,"api":"./dytt.js","ext":{}}
 const BASE_URL = "https://caiji.dyttzyapi.com/api.php/provide/vod";
-
 const UA = "Mozilla/5.0 (Linux; Android 12; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/122.0.6261.119 Mobile Safari/537.36";
 
-// 静态筛选数据：地区
+// 静态筛选 地区
 const AREA_VALUES = [
   { n: "全部", v: "" },
   { n: "中国大陆", v: "中国大陆" },
@@ -27,37 +23,43 @@ const AREA_VALUES = [
   { n: "其他", v: "其他" },
 ];
 
-// 静态筛选数据：年份（按当前年份动态生成近 22 年）
+// 年份
 function buildYearValues() {
-  const nowYear = new Date().getFullYear();
-  const years = [{ n: "全部", v: "" }];
-  for (let y = nowYear; y >= nowYear - 21; y--) {
-    years.push({ n: String(y), v: String(y) });
+  try {
+    const nowYear = new Date().getFullYear();
+    const years = [{ n: "全部", v: "" }];
+    for (let y = nowYear; y >= nowYear - 21; y--) {
+      years.push({ n: String(y), v: String(y) });
+    }
+    return years;
+  }catch(e){
+    log("年份生成异常"+e);
+    return [{n:"全部",v:""}];
   }
-  return years;
 }
 
-// 发起 GET 请求并解析 JSON
+// 请求+json解析 增加全局try
 function getJson(url) {
-  const res = req(url, {
-    method: "GET",
-    headers: { "User-Agent": UA },
-  });
   try {
+    log("req:"+url);
+    const res = req(url, {
+      method: "GET",
+      headers: { "User-Agent": UA },
+    });
     return JSON.parse(res.content);
   } catch (e) {
+    log("请求失败: " + url + " err:" + e);
     return {};
   }
 }
 
-// 拉取采集站 class 数组（含一级、二级分类）
+// 获取分类
 function fetchClasses() {
   const data = getJson(`${BASE_URL}?ac=list`);
   return data.class || [];
 }
 
-// 由 class 组装：一级分类列表 + 每个一级分类下的二级分类
-// type_pid 为 0 的是一级分类，不为 0 的是二级分类
+// 构建分类树
 function buildTree(allClasses) {
   const tops = allClasses.filter((c) => Number(c.type_pid) === 0);
   const tree = tops.map((top) => ({
@@ -68,7 +70,7 @@ function buildTree(allClasses) {
   return tree;
 }
 
-// 清理简介中的 HTML 标签与空白
+// 清理简介
 function cleanText(str) {
   if (!str) return "";
   return String(str)
@@ -78,7 +80,7 @@ function cleanText(str) {
     .trim();
 }
 
-// 采集卡片字段 → CatVod Vod 字段
+// 转为vod结构
 function toVod(item) {
   return {
     vod_id: String(item.vod_id),
@@ -90,11 +92,11 @@ function toVod(item) {
     vod_area: item.vod_area || "",
     vod_actor: item.vod_actor || "",
     vod_director: item.vod_director || "",
-    vod_content: cleanText(item.vod_blurb || item.vod_content),
+    vod_content: cleanText(item.vod_content || item.vod_blurb),
   };
 }
 
-// 拼接列表/搜索请求
+// 拼接url参数
 function buildListUrl(params) {
   const q = ["ac=videolist"];
   Object.keys(params).forEach((k) => {
@@ -110,9 +112,6 @@ export default {
   init(ext) {
     this.ext = ext;
   },
-
-  // 首页：从采集地址获取 class，type_pid=0 作为一级分类；
-  // 二级分类、地区、年份组装为 filters
   home(filter) {
     const tree = buildTree(fetchClasses());
     const classes = [];
@@ -123,9 +122,9 @@ export default {
         type_name: top.type_name,
       });
       if (filter) {
-        // 二级分类选项：全部 = 聚合该一级分类下所有二级分类 id
+        // 修复：去掉逗号多ID，全部单选，全部传空
         const classValues = [
-          { n: "全部", v: top.children.map((c) => c.type_id).join(",") },
+          { n: "全部", v: "" },
           ...top.children.map((c) => ({ n: c.type_name, v: String(c.type_id) })),
         ];
         filters[String(top.type_id)] = [
@@ -140,22 +139,18 @@ export default {
       filters: filter ? filters : {},
     });
   },
-
   homeVod() {
     const data = getJson(buildListUrl({ pg: 1 }));
-    return JSON.stringify({ list: (data.list || []).map(toVod) });
+    const list = data.list || [];
+    return JSON.stringify({ list: list.map(toVod) });
   },
-
-  // 分类：tid 为一级分类 id；extend.t 为选中的二级分类 id（多个逗号分隔）
   category(tid, pg, filter, extend) {
     const tree = buildTree(fetchClasses());
     const top = tree.find((c) => String(c.type_id) === String(tid));
-    // 未选二级分类时，聚合该一级分类下全部二级分类 id
     let typeIds = extend && extend.t;
+    // 修复：没选二级分类则t为空，而不是拼接逗号ID
     if (!typeIds && top) {
-      typeIds = top.children.length
-        ? top.children.map((c) => c.type_id).join(",")
-        : String(top.type_id);
+      typeIds = "";
     }
     const data = getJson(
       buildListUrl({
@@ -165,56 +160,47 @@ export default {
         year: extend && extend.year,
       })
     );
+    const list = data.list || [];
     return JSON.stringify({
-      list: (data.list || []).map(toVod),
+      list: list.map(toVod),
       page: Number(data.page) || Number(pg) || 1,
       pagecount: Number(data.pagecount) || 0,
       limit: Number(data.limit) || 20,
       total: Number(data.total) || 0,
     });
   },
-
   detail(ids) {
     const id = Array.isArray(ids) ? ids[0] : ids;
     const data = getJson(buildListUrl({ ids: id }));
     const item = (data.list || [])[0];
     if (!item) return JSON.stringify({ list: [] });
     const vod = toVod(item);
-    // maccms 的播放分组与集数格式（$$$ / # / $）与 CatVod 一致，直接透传
     vod.vod_play_from = item.vod_play_from || "";
     vod.vod_play_url = item.vod_play_url || "";
-    vod.vod_content = cleanText(item.vod_content);
     vod.vod_lang = item.vod_lang || "";
     return JSON.stringify({ list: [vod] });
   },
-
   search(wd, quick, pg) {
     const data = getJson(buildListUrl({ wd: wd, pg: pg || 1 }));
+    const list = data.list || [];
     return JSON.stringify({
-      list: (data.list || []).map(toVod),
+      list: list.map(toVod),
       pagecount: Number(data.pagecount) || 0,
     });
   },
-
-  // 播放：m3u8 直链直接回传；share 链接需走解析
   play(flag, id, vipFlags) {
     if (id.indexOf(".m3u8") > -1 || id.indexOf(".mp4") > -1) {
       return JSON.stringify({
         parse: 0,
-        playUrl: "",
         url: id,
         header: { "User-Agent": UA, Referer: "https://www.dyttzy.com/" },
       });
     }
-    // 需第三方解析的线路（如 /share/ 页面链接）
     return JSON.stringify({
       parse: 1,
-      jx: 1,
-      playUrl: "",
       url: id,
       header: { "User-Agent": UA },
-    }); 
+    });
   },
-
   destroy() {},
 };
