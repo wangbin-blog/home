@@ -14,8 +14,16 @@
             "timeout": 10,
             "categories": []
         },
-        
-        {"key": "dr_电影天堂[资]","name": "🥒电影天堂[采][DR]","type": 3,"api": "./js/drpy2.min.js","ext": "./js/dytt.js"},
+        {
+            "key": "dr_电影天堂[资]",
+            "name": "🥒电影天堂[采][DR]",
+            "type": 3,
+            "api": "./js/dytt.js",
+            "ext": "",
+            "searchable": 1,
+            "changeable": 1,
+            "header": { "User-Agent": "ExampleClient/1.0" },
+        },
         {
             "key": "jusj",
             "name": "奇妙官采",
@@ -52,10 +60,22 @@
             "timeout": 10,
             "categories": [],
             "class": [
-                {"type_id": 1, "type_name": "电影片"},
-                {"type_id": 2, "type_name": "连续剧"},
-                {"type_id": 3, "type_name": "综艺片"},
-                {"type_id": 4, "type_name": "动漫片"}
+                {
+                    "type_id": 1,
+                    "type_name": "电影片"
+                },
+                {
+                    "type_id": 2,
+                    "type_name": "连续剧"
+                },
+                {
+                    "type_id": 3,
+                    "type_name": "综艺片"
+                },
+                {
+                    "type_id": 4,
+                    "type_name": "动漫片"
+                }
             ]
         },
         {
@@ -420,7 +440,8 @@
             "ext": "",
             "timeout": 10,
             "categories": []
-        },{
+        },
+        {
             "key": "maoyanapi",
             "name": "猫眼资源",
             "type": 1,
@@ -431,7 +452,8 @@
             "ext": "",
             "timeout": 10,
             "categories": []
-        },{
+        },
+        {
             "key": "huyazy",
             "name": "虎牙资源站",
             "type": 1,
@@ -710,14 +732,14 @@
             "jar": "https://js.jiangss.shop/https://raw.githubusercontent.com/goodcommunication/mydm/main/danmu-spider-native.jar",
             "ext": {
                 "apiUrls": [
-                "https://danmu.iyo.us.ci/theft-dastardly-prognosis-hula-agenda2-dropkick|公益源",
-                "https://logo.saodu.work:8888/87654321|公益源1",
-                "https://dm.ljiaovm.com/luosen|公益源2"
+                    "https://danmu.iyo.us.ci/theft-dastardly-prognosis-hula-agenda2-dropkick|公益源",
+                    "https://logo.saodu.work:8888/87654321|公益源1",
+                    "https://dm.ljiaovm.com/luosen|公益源2"
                 ],
                 "titleMappingsUrl": "https://js.jiangss.shop/https://raw.githubusercontent.com/goodcommunication/mydm/main/yins.json",
                 "filter": "./lib/douban.json"
             }
-            }
+        }
     ],
     "parses": [
         {
