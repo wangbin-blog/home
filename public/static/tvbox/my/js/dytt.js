@@ -1,33 +1,33 @@
 /*
-* @File     : feifan2.js
-* @Author   : jade
-* @Date     : 2024/02/06 14:58
-* @Email    : jadehh@1ive.com
+* @File     : dytt.js
+* @Author   : thinkw
+* @Date     : 2026年11月5日
+* @Email    : 
 * @Software : Samples
-* @Desc     : 非凡资源(一级分类+二级分类筛选版)
+* @Desc     : 电影天堂资源(一级分类+二级分类筛选版)
 *             首页分类展示一级分类(type_pid=0)，每个分类下通过筛选栏选择二级子分类(type_pid=父分类id)
 */
 
 import {VodSpider} from "./vodSpider.js";
 
-class FeiFanV2Spider extends VodSpider {
+class DianYingTianTangSpider extends VodSpider {
     constructor() {
         super();
-        this.siteUrl = "http://cj.ffzyapi.com"
+        this.siteUrl = "https://caiji.dyttzyapi.com"
         this.remove18 = true
-        this.type_id_18 = 34
+        this.type_id_18 = 9999
     }
 
     getAppName() {
-        return "非凡资源二筛"
+        return "电影天堂"
     }
 
     getName() {
-        return `🥗┃非凡资源二筛┃🥗`
+        return `🥗┃电影天堂┃🥗`
     }
 
     getJSName() {
-        return "feifan2"
+        return "DianYingTianTang"
     }
 
     getType() {
@@ -81,7 +81,7 @@ class FeiFanV2Spider extends VodSpider {
     }
 }
 
-let spider = new FeiFanV2Spider()
+let spider = new DianYingTianTangSpider()
 
 async function init(cfg) {
     await spider.init(cfg)

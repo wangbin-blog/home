@@ -1,15 +1,16 @@
 /*
 * @File     : feifan.js
-* @Author   : jade
-* @Date     : 2024/02/06 14:58
-* @Email    : jadehh@1ive.com
+* @Author   : thinkw
+* @Date     : 2026年11月5日
+* @Email    : 
 * @Software : Samples
-* @Desc     : 非凡资源 (已失效)
+* @Desc     : 非凡资源(一级分类+二级分类筛选版)
+*             首页分类展示一级分类(type_pid=0)，每个分类下通过筛选栏选择二级子分类(type_pid=父分类id)
 */
 
 import {VodSpider} from "./vodSpider.js";
 
-class FeiFanSpider extends VodSpider {
+class FeiFanV2Spider extends VodSpider {
     constructor() {
         super();
         this.siteUrl = "http://cj.ffzyapi.com"
@@ -44,9 +45,43 @@ class FeiFanSpider extends VodSpider {
 
     }
 
+    /**
+     * 首页一级分类: 只取 type_pid === 0 的根分类
+     * 伦理片一级分类整体排除 (remove18)
+     */
+    async setClasses() {
+        let content = await this.fetch(this.siteUrl + "/api.php/provide/vod/from", {"ac": "list"}, this.getHeader())
+        let content_json = JSON.parse(content)
+        this.allClassList = content_json["class"]
+        for (const class_dic of this.allClassList) {
+            if (class_dic["type_pid"].toString() === "0" && class_dic["type_name"] !== this.type_name_18) {
+                this.classes.push(this.getTypeDic(class_dic["type_name"], class_dic["type_id"].toString()))
+            }
+        }
+    }
+
+    /**
+     * 二级分类筛选: 为每个一级分类挂载其子分类 (type_pid === 一级分类的type_id)
+     * "全部" 使用一级分类自身的 type_id 直接查询 (站点接口支持按父分类tid聚合查询)
+     */
+    async setFilterObj() {
+        for (const root_class_dic of this.classes) {
+            let type_id = root_class_dic["type_id"].toString()
+            let extend_dic = {"key": "1", "name": "分类", "value": [this.getFliterDic("全部", type_id)]}
+            for (const class_dic of this.allClassList) {
+                if (this.remove18 && class_dic["type_id"].toString() === this.type_id_18.toString()) {
+                    continue
+                }
+                if (class_dic["type_pid"].toString() === type_id) {
+                    extend_dic["value"].push(this.getFliterDic(class_dic["type_name"], class_dic["type_id"].toString()))
+                }
+            }
+            this.filterObj[type_id] = [extend_dic]
+        }
+    }
 }
 
-let spider = new FeiFanSpider()
+let spider = new FeiFanV2Spider()
 
 async function init(cfg) {
     await spider.init(cfg)

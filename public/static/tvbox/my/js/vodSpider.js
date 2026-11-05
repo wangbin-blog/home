@@ -139,6 +139,7 @@ class VodSpider extends Spider {
         let content = await this.fetch(this.siteUrl + "/index.php/ajax/data", {
             "mid": "1"
         }, this.getHeader())
+        await this.jadeLog.debug(`HomeVod:content :${content}`)
         this.homeVodList = await this.parseVodShortListFromJson(JSON.parse(content))
     }
 
@@ -154,7 +155,7 @@ class VodSpider extends Spider {
         let url = this.siteUrl + `/index.php/ajax/data?mid=1&tid=${tid}&page=${pg}&limit=20`
         await this.jadeLog.debug(`分类URL:${url}`)
         let content = await this.fetch(url, null, this.getHeader())
-        await this.jadeLog.debug(`分类内容为:${content}`)
+        // await this.jadeLog.debug(`分类内容为:${content}`)
         this.vodList = await this.parseVodShortListFromJson(JSON.parse(content))
     }
 
