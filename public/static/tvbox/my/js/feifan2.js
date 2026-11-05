@@ -53,10 +53,6 @@ class FeiFanV2Spider extends VodSpider {
         let content = await this.fetch(this.siteUrl + "/api.php/provide/vod/from", {"ac": "list"}, this.getHeader())
         let content_json = JSON.parse(content)
         this.allClassList = content_json["class"]
-        // 「最近更新」放在首位, 不依赖 ext.box 是否为 CatOpen, 保证 TVBox/XMBox 下都显示
-        if (!this.classes.some(class_dic => class_dic["type_id"] === "最近更新")) {
-            this.classes.push(this.getTypeDic("最近更新", "最近更新"))
-        }
         for (const class_dic of this.allClassList) {
             if (class_dic["type_pid"].toString() === "0" && class_dic["type_name"] !== this.type_name_18) {
                 this.classes.push(this.getTypeDic(class_dic["type_name"], class_dic["type_id"].toString()))
