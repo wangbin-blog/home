@@ -5,9 +5,9 @@
       "name": "🥗┃电影天堂┃🥗",
       "type": 3,
       "api": "./js/dytt.js",
-      "timeout": 3,
+      "timeout": 30,
       "ext": {
-        "box": "TvBox"
+        "box": "TVBox"
       },
       "playerType": 0
     },
@@ -16,9 +16,20 @@
       "name": "🥗┃非凡资源┃🥗",
       "type": 3,
       "api": "./js/feifan.js",
-      "timeout": 3,
+      "timeout": 30,
       "ext": {
-        "box": "TvBox"
+        "box": "TVBox"
+      },
+      "playerType": 0
+    },
+    {
+      "key": "liangzi",
+      "name": "🐝┃量子资源┃🐝",
+      "type": 3,
+      "api": "./js/liangzi.js",
+      "timeout": 30,
+      "ext": {
+        "box": "TVBox"
       },
       "playerType": 0
     }

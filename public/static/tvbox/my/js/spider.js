@@ -14,7 +14,6 @@ import {_, load, Uri} from "../lib/cat.js";
 import * as HLS from "../lib/hls.js";
 import {hlsCache, tsCache} from "../lib/ffm3u8_open.js";
 import {DanmuSpider} from "../lib/danmuSpider.js";
-import { initCloud } from "../lib/cloud.js";
 class Result {
     constructor() {
         this.class = []
@@ -451,10 +450,6 @@ class Spider {
             return {"token": null, "CatOpenStatus": false, "code": 0}
         }
 
-    }
-
-    async initCloud(token) {
-        await initCloud(token)
     }
 
     async spiderInit() {

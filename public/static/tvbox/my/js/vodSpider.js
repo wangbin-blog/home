@@ -94,7 +94,7 @@ class VodSpider extends Spider {
     }
 
     async setClasses() {
-        let content = await this.fetch(this.siteUrl + "/api.php/provide/vod/from", {"ac": "list"}, this.getHeader())
+        let content = await this.fetch(this.siteUrl + "/api.php/provide/vod/from", {"ac": "list",}, this.getHeader())
         let content_json = JSON.parse(content)
         for (const class_dic of content_json["class"]) {
             if (class_dic["type_pid"] !== 0) {

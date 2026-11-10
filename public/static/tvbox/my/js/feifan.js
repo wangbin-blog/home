@@ -15,7 +15,7 @@ class FeiFanV2Spider extends VodSpider {
         super();
         this.siteUrl = "http://cj.ffzyapi.com"
         this.remove18 = true
-        this.type_id_18 = 34
+        this.type_id_18 = 999
     }
 
     getAppName() {
